@@ -1,0 +1,42 @@
+ <div infinite-scroll 
+ (scrolled)="onScrollDown($event)"> 
+ <div class="card w-100 mb-3" *ngFor = "let post of posts;let i = index">
+    <div class="d-flex m-2">
+      <div class="me-3"> 
+        <img src = "{{post?.picture?.thumbnail}}" class="rounded-circle">
+      </div>
+      <div>
+          <span class="font-weight-bold fs-16">{{post?.name.first }} {{post?.name?.last}}</span> <br>
+          <span class="fs-14">{{post?.location?.city}}</span>
+      </div> 
+    <span class="col justify-content-end">
+            <i class="fa fa-ellipsis-h float-right mt-3" aria-hidden="true"></i>
+    </span> 
+    </div>
+    <div>
+        <img src="https://picsum.photos/600/300?random={{i}}"style ="height: 300px;" class="w-100">
+    </div>
+    <div class="d-flex my-3">
+        <i class="far fa-heart fa-lg me-3 ml-2 pointer"></i>
+        <i class="far fa-comment fa-lg me-3 pointer"></i>
+        <i class="far fa-paper-plane fa-lg pointer"></i>
+        <span class="col justify-content-end">
+            <i class="far fa-bookmark fa-lg float-right pointer"></i>
+        </span>
+    </div>
+    <div class="ml-2 mb-2">
+        <span class="fs-14">Liked by <b> abc</b> and <b>others</b> </span><br>
+        <span class="fs-14"><b>others </b><span>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</span></span><br>
+        <span class="fs-12 text-secondary">View all 370 coments</span> <br>
+        <span class="fs-12 text-secondary">12 hours ago</span>
+    </div>
+    <div class="border">
+        <div class="d-flex ml-2">
+            <i class="far fa-grin" style="margin-top: 10px;"></i>
+            <input class="w-100" style="border: none;" [(ngModel)] = "comment" (change) = "addComment()">
+            <button class="btn btn-success" [disabled] = "!isComment" (click) = "postComment()">Post</button>
+        </div>
+    </div>
+    
+  </div>
+</div>

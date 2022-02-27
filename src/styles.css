@@ -1,0 +1,16 @@
+p,span {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+ }
+ .fs-14 {
+     font-size: 14px;
+ }
+ .fs-16 {
+     font-size: 16px;
+ }
+ .fs-12 {
+     font-size: 12px;
+ }
+ .pointer {
+     cursor: pointer;
+ }
+ 
