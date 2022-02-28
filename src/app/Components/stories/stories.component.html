@@ -1,0 +1,11 @@
+
+<div class="card w-100" style="height: 120px;">
+    <div class="d-flex m-3" style="overflow-x:auto;"> 
+  <div class="mx-2" *ngFor = "let name of names;let i = index">
+    <div class="round-border"> 
+       <img src="https://picsum.photos/50/50?random={{i}}" class="rounded-circle" style="margin: 0 auto;display: block;">
+    </div>
+    <p class="fs-12 text-center mt-1">{{name}}</p>
+  </div>
+  </div>
+</div>

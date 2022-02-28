@@ -1,0 +1,10 @@
+.hr {
+    border-top: 1px solid silver;
+    width: 100%;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right:10px;
+}
+.fb {
+    color: #3b5998;
+}

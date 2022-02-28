@@ -1,0 +1,40 @@
+<div class="row justify-content-center align-content-center m-1" style="height: 100vh;">
+     <div class="col-auto d-none d-md-block">
+         <img src="assets/instagram.png">
+     </div>
+    <div class="col-auto">
+        <div class="card mt-5">
+            <div class="mt-5">
+                <img src="assets/logo.png" width="150px" style="margin: 0 auto;display: block;">
+            </div>
+            <form class="mx-5 mt-5" [formGroup] = "login" (ngSubmit) = "onSubmit()">
+                <div class="mb-3">
+                    <input type="email" class="form-control" placeholder="email address" formControlName = "email">
+                </div>
+                <div *ngIf = "f?.email?.errors && f?.email?.errors?.email">
+                  <p class="text-danger">Please enter a valid email</p>
+                </div>
+                <div *ngIf="f.email.touched && f?.email?.errors && f?.email?.errors?.required">
+                <p class="text-danger">Please enter a email</p>
+               </div>
+                <div class="mb-3"> 
+                    <input type="password" class="form-control" placeholder="password" formControlName = "password">
+                </div>
+                <div *ngIf="f.password.touched && f?.password?.errors && f?.password?.errors?.required">
+                    <p class="text-danger">Please enter a password</p>
+                   </div>
+                <button class="btn btn-primary btn-block mb-4" type="submit" [disabled] = "!login.valid">Login</button>
+                 <div class="d-flex">
+                   <div class="hr"> </div>
+                   <p class="text-center">OR</p>
+                   <div class="hr"></div>
+                 </div>
+                <p class="text-center fs-16 fb font-weight-bold pointer"><i class="fab fa-facebook-square me-3"></i>Login With Facebook</p>
+                <p class="text-center fs-14 fb pointer">Forgotten your password</p>
+            </form>
+        </div>
+        <div class="card mt-3 py-2">
+            <p class="text-center mt-3">Don't have and account <b class="fb pointer" routerLink = "/auth/register">Sign up</b></p>
+        </div>
+    </div>
+</div>

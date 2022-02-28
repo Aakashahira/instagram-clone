@@ -1,0 +1,34 @@
+<app-navbar> </app-navbar>
+<div class="row justify-content-center mt-5">
+  <div class="col-auto">
+    <div class="me-5">
+        <img src="{{currentUser?.picture?.large}}" class="rounded-circle"> 
+    </div>
+  </div>
+  <div class="col-auto">
+    <div>
+        <span>{{currentUser?.name}}</span> <br>
+        <div class="d-flex">
+         <p><b>21 </b>posts</p>
+         <p class="mx-3"><b>128 </b>followers</p>
+         <p><b>71 </b>following</p>
+        </div>
+          <span><b>{{currentUser?.name}}</b></span> <br>
+          <span>Date Of Birth:  {{currentUser?.dob | date : "yyyy-mm-dd"}}</span> <br>
+          <span>Lives in {{currentUser?.city}}</span>
+     </div>  
+  </div>
+</div>
+<!-- <div class="d-flex justify-content-center mt-5">
+        
+        
+</div> -->
+<div class="row justify-content-center mt-5">
+    <div class="col-auto">
+        <app-my-posts></app-my-posts>
+    </div>
+    
+</div>
+
+
+
